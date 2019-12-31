@@ -12,8 +12,6 @@
         <!-- <sidebar-item :link="{name: 'Mapdhgfsdjfhsjdfhjdhs', icon: 'ni ni-pin-3 text-orange', path: '/maps'}"/> -->
         <sidebar-item :link="{name: 'Ajouter étudiant', icon: 'ni ni-single-02 text-yellow', path: '/profile'}"/>
         <sidebar-item :link="{name: 'Liste des étudiants', icon: 'ni ni-bullet-list-67 text-red', path: '/tables'}"/>
-        <sidebar-item :link="{name: 'Se connecter', icon: 'ni ni-key-25 text-info', path: '/login'}"/>
-        <sidebar-item :link="{name: 'S\'inscrire', icon: 'ni ni-circle-08 text-pink', path: '/register'}"/>
 
       </template>
     </side-bar>

@@ -55,8 +55,7 @@
               </a>
 
               <template>
-                <a class="dropdown-item" href="#">Modifier</a>
-                <a class="dropdown-item" href="#">Supprimer</a>
+                <a v-on:click="deleteStudent(row.id)" class="dropdown-item" href="#">Supprimer</a>
               </template>
             </base-dropdown>
           </td>
@@ -66,10 +65,7 @@
       </base-table>
     </div>
 
-    <div class="card-footer d-flex justify-content-end"
-         :class="type === 'dark' ? 'bg-transparent': ''">
-      <base-pagination total="30"></base-pagination>
-    </div>
+ 
 
   </div>
 </template>
@@ -89,14 +85,28 @@ const axios = require('axios').default;
         tableData : []
       }
     },
-    mounted () {
-      axios
+    methods : {
+      deleteStudent : function(id) {
+        axios
+        .delete('http://127.0.0.1:8000/api/students/' + id)
+        .then(res => {
+          alert(res.data.message)
+          this.getAllStudents() ;
+        })
+        .catch(err => alert("Error while Deleting Student" + err))
+    } , 
+    getAllStudents : function () {
+  axios
         .get('http://127.0.0.1:8000/api/students')
         .then(res => {
          this.tableData = res.data.data
          console.log(res.data.data)
         })
         .catch(err => alert("Error while fetching Data" + err))
+    },
+      },
+    mounted () {
+    this.getAllStudents() ;
     }
   }
 </script>

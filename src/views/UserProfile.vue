@@ -30,9 +30,7 @@
                                 <div class="col-8">
                                     <h3 class="mb-0">Ajouter un étudiant</h3>
                                 </div>
-                                <div class="col-4 text-right">
-                                    <a href="#!" class="btn btn-sm btn-primary">Paramètres</a>
-                                </div>
+                                
                             </div>
                         </div>
                         <template>
@@ -63,7 +61,7 @@
                                                         label="Nom"
                                                         placeholder="Nom"
                                                         input-classes="form-control-alternative"
-                                                        v-model="model.nom"
+                                                        v-model="model.first_name"
                                             />
                                         </div>
                                         <div class="col-lg-6">
@@ -71,7 +69,7 @@
                                                         label="Prénom"
                                                         placeholder="Prénom"
                                                         input-classes="form-control-alternative"
-                                                        v-model="model.prenom"
+                                                        v-model="model.last_name"
                                             />
                                         </div>
                                     </div>
@@ -86,7 +84,7 @@
                                                         label="Adresse civile"
                                                         placeholder="adresse"
                                                         input-classes="form-control-alternative"
-                                                        v-model="model.addresse"
+                                                        v-model="model.adresse"
                                             />
                                         </div>
                                     </div>
@@ -112,7 +110,7 @@
                                                         label="Numéro de téléphone"
                                                         placeholder="ex: 0555778899"
                                                         input-classes="form-control-alternative"
-                                                        v-model="model.num"
+                                                        v-model="model.phone"
                                             />
                                         </div>
                                     </div>
@@ -146,7 +144,7 @@
                                                         v-model="model.groupe"
                                             />
                                         </div>
-                                        <a href="#!" class="btn btn-info">Valider!</a>
+                                        <a v-on:click="addStudent" href="#!" class="btn btn-info">Valider!</a>
                                     </div>
                                 </div>
                             </form>
@@ -158,6 +156,9 @@
     </div>
 </template>
 <script>
+const axios = require('axios').default;
+import Router from 'vue-router'
+
   export default {
     name: 'user-profile',
     data() {
@@ -165,18 +166,29 @@
         model: {
           matricule: '',
           email: '',
-          nom: '',
-          prenom: '',
-          addresse: '',
+          first_name: '',
+          last_name: '',
+          adresse: '',
           commune: '',
           wilaya: '',
-          num: '',
+          phone: '',
           promo: '',
           section: '',
           groupe: '',
         }
       }
     },
+    methods : {
+        addStudent : function(e) {
+        axios
+        .post('http://127.0.0.1:8000/api/students' , this.model)
+        .then(res => {
+         alert(res.data.message)
+        window.location.href = "/tables";
+        })
+        .catch(err => alert(err))
+        }
+    }
   };
 </script>
 <style></style>
