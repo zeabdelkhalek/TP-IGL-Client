@@ -18,6 +18,8 @@ Pour lancer l'application en local installer NodeJS et Git , aprés éxecutez ce
 
 4. Accéder à l'application via : `http://127.0.0.1:8080`
 
+5. N'oubliez pas de télécharger l'extension [Allow CORS](https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=en) pour activer les requêtes CORS.
+
 ## Lancer l'application en utilisant Docker : 
 
 Pour lancer l'application en local installer Docker et Git ,aprés éxecutez ces commandes : 
