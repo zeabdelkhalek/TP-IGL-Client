@@ -181,7 +181,7 @@ import Router from 'vue-router'
     methods : {
         addStudent : function(e) {
         axios
-        .post('http://127.0.0.1:8000/api/students' , this.model)
+        .post('http://127.0.0.1/api/students' , this.model)
         .then(res => {
          alert(res.data.message)
         window.location.href = "/tables";

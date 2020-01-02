@@ -88,7 +88,7 @@ const axios = require('axios').default;
     methods : {
       deleteStudent : function(id) {
         axios
-        .delete('http://127.0.0.1:8000/api/students/' + id)
+        .delete('http://127.0.0.1/api/students/' + id)
         .then(res => {
           alert(res.data.message)
           this.getAllStudents() ;
@@ -97,7 +97,7 @@ const axios = require('axios').default;
     } , 
     getAllStudents : function () {
   axios
-        .get('http://127.0.0.1:8000/api/students')
+        .get('http://127.0.0.1/api/students')
         .then(res => {
          this.tableData = res.data.data
          console.log(res.data.data)
