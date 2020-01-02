@@ -25,7 +25,7 @@ git clone https://github.com/AbdelkhalekESI/TP-IGL-Client
 cd TP-IGL-Client
 ```
 
-2. Installer les dépendances :
+2. Installer les dépendances nécessaires :
 
 ```bash
 npm install
