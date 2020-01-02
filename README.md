@@ -39,7 +39,7 @@ cd TP-IGL-Client
 
 ## Lancer l'application en utilisant Docker : 
 
-Pour lancer l'application en local installer [Docker](https://www.docker.com/products/docker-desktop) ,aprés éxecutez ces commandes : 
+Pour lancer l'application avec [Docker](https://www.docker.com/products/docker-desktop) installer le ,aprés éxecutez ces commandes : 
 
 1. Cloner le repository :
 
