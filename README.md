@@ -27,11 +27,15 @@ cd TP-IGL-Client
 
 2. Installer les dépendances :
 
-`npm install`
+```bash
+npm install
+```
 
 3. Lancer l'application :
 
-`npm run serve`
+```bash
+npm run serve
+```
 
 4. Accéder à l'application via : `http://127.0.0.1:8080`
 
@@ -43,14 +47,20 @@ Pour lancer l'application avec [Docker](https://www.docker.com/products/docker-d
 
 1. Cloner le repository :
 
-`git clone https://github.com/AbdelkhalekESI/TP-IGL-Client`
+```bash
+git clone https://github.com/AbdelkhalekESI/TP-IGL-Client
+```
 
 2. Construire l'image Docker : 
 
-`docker build -t tp-igl/vue-app:0.1 .`
+```bash
+docker build -t tp-igl/vue-app:0.1 .
+```
 
 3. Lancer le conteneur Docker : 
 
-`docker run -it -p 8080:8080 --rm tp-igl/vue-app:0.1`
+```bash
+docker run -it -p 8080:8080 --rm tp-igl/vue-app:0.1
+```
 
 4. Accéder à l'application via : `http://127.0.0.1:8080`
