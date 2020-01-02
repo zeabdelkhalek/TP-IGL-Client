@@ -25,6 +25,7 @@
         </div>
         <slot v-bind="slotData">
             <input
+                    :id="id"
                     :value="value"
                     v-on="listeners"
                     v-bind="$attrs"
@@ -57,6 +58,10 @@ export default {
     required: {
       type: Boolean,
       description: "Whether input is required (adds an asterix *)"
+    },
+    id: {
+      type: String,
+      description: "id for input to use for scrapping"
     },
     valid: {
       type: Boolean,

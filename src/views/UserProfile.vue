@@ -40,6 +40,7 @@
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <base-input alternative=""
+                                                        id="input-matricule"
                                                         label="Matricule"
                                                         placeholder="année bac/ rang"
                                                         input-classes="form-control-alternative"
@@ -48,6 +49,7 @@
                                         </div>
                                         <div class="col-lg-6">
                                             <base-input alternative=""
+                                                        id="input-email"
                                                         label="Adresse mail"
                                                         placeholder="ex: hi_kara@esi.dz"
                                                         input-classes="form-control-alternative"
@@ -58,6 +60,7 @@
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <base-input alternative=""
+                                                        id="input-nom"
                                                         label="Nom"
                                                         placeholder="Nom"
                                                         input-classes="form-control-alternative"
@@ -66,6 +69,7 @@
                                         </div>
                                         <div class="col-lg-6">
                                             <base-input alternative=""
+                                                        id="input-prenom"
                                                         label="Prénom"
                                                         placeholder="Prénom"
                                                         input-classes="form-control-alternative"
@@ -81,6 +85,7 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <base-input alternative=""
+                                                        id="input-adresse"
                                                         label="Adresse civile"
                                                         placeholder="adresse"
                                                         input-classes="form-control-alternative"
@@ -91,6 +96,7 @@
                                     <div class="row">
                                         <div class="col-lg-4">
                                             <base-input alternative=""
+                                                        id="input-commune"
                                                         label="commune"
                                                         placeholder="ex: EL-HARRACH"
                                                         input-classes="form-control-alternative"
@@ -99,6 +105,7 @@
                                         </div>
                                         <div class="col-lg-4">
                                             <base-input alternative=""
+                                                        id="input-wilaya"
                                                         label="Wilaya"
                                                         placeholder="ex: ALGER"
                                                         input-classes="form-control-alternative"
@@ -107,6 +114,7 @@
                                         </div>
                                         <div class="col-lg-4">
                                             <base-input alternative=""
+                                                        id="input-phone"
                                                         label="Numéro de téléphone"
                                                         placeholder="ex: 0555778899"
                                                         input-classes="form-control-alternative"
@@ -122,6 +130,7 @@
                                     <div class="row">
                                         <div class="col-lg-4">
                                             <base-input alternative=""
+                                                        id="input-promo"
                                                         label="Promo"
                                                         placeholder="ex: 1CS"
                                                         input-classes="form-control-alternative"
@@ -130,6 +139,7 @@
                                         </div>
                                         <div class="col-lg-4">
                                             <base-input alternative=""
+                                                        id="input-section"
                                                         label="Section"
                                                         placeholder="ex: C"
                                                         input-classes="form-control-alternative"
@@ -138,13 +148,14 @@
                                         </div>
                                         <div class="col-lg-4">
                                             <base-input alternative=""
+                                                        id="input-groupe"
                                                         label="Groupe"
                                                         placeholder="ex: 08"
                                                         input-classes="form-control-alternative"
                                                         v-model="model.groupe"
                                             />
                                         </div>
-                                        <a v-on:click="addStudent" href="#!" class="btn btn-info">Valider!</a>
+                                        <a id="submit" v-on:click="addStudent" href="#!" class="btn btn-info">Valider!</a>
                                     </div>
                                 </div>
                             </form>
