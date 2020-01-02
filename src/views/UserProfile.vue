@@ -184,7 +184,6 @@ import Router from 'vue-router'
         .post('http://127.0.0.1/api/students' , this.model)
         .then(res => {
          alert(res.data.message)
-        window.location.href = "/tables";
         })
         .catch(err => alert(err))
         }
