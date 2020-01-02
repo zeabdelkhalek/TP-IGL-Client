@@ -93,7 +93,7 @@ const axios = require('axios').default;
           alert(res.data.message)
           this.getAllStudents() ;
         })
-        .catch(err => alert("Error while Deleting Student" + err))
+        .catch(err => console.log("Error while Deleting Student" + err))
     } , 
     getAllStudents : function () {
   axios
@@ -102,7 +102,7 @@ const axios = require('axios').default;
          this.tableData = res.data.data
          console.log(res.data.data)
         })
-        .catch(err => alert("Error while fetching Data" + err))
+        .catch(err => console.log("Error while fetching Data" + err))
     },
       },
     mounted () {
