@@ -2,11 +2,28 @@
 
 ## Lancer l'application Localement : 
 
-Pour lancer l'application en local installer NodeJS et Git , aprés éxecutez ces commandes : 
+### Exigences 
 
-1. Cloner le repository :
+| Exigence                                 | Version |
+| ------------------------------------------- | ------- |
+| [NodeJS](https://nodejs.org/en/download/) | `10.15+`  |
+| [Git](https://git-scm.com/downloads) | `2.0+`  |
 
-`git clone https://github.com/AbdelkhalekESI/TP-IGL-Client`
+Exécutez les commandes suivantes pour vérifier les versions installées actuelles:
+
+```bash
+node --version
+git --version
+```
+
+Puis Lancer ces commandes : 
+
+1. Cloner le repository et monter sur le projet : :
+
+```bash
+git clone https://github.com/AbdelkhalekESI/TP-IGL-Client 
+cd TP-IGL-Client
+```
 
 2. Installer les dépendances :
 
@@ -22,7 +39,7 @@ Pour lancer l'application en local installer NodeJS et Git , aprés éxecutez ce
 
 ## Lancer l'application en utilisant Docker : 
 
-Pour lancer l'application en local installer Docker et Git ,aprés éxecutez ces commandes : 
+Pour lancer l'application en local installer [Docker](https://www.docker.com/products/docker-desktop) ,aprés éxecutez ces commandes : 
 
 1. Cloner le repository :
 
